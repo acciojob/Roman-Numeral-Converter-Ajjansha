@@ -10,6 +10,36 @@ function convertToRoman(num) {
     };
 
   //your code here
+	if (num === 0) return ""; // Roman numerals have no zero
+
+    let result = "";
+
+    // Subtractive combinations
+    const subtractives = [
+        ['CM', 900],
+        ['CD', 400],
+        ['XC', 90],
+        ['XL', 40],
+        ['IX', 9],
+        ['IV', 4]
+    ];
+
+    for (let [symbol, value] of subtractives) {
+        while (num >= value) {
+            result += symbol;
+            num -= value;
+        }
+    }
+
+    for (let key in obj) {
+        let [symbol, value] = obj[key];
+        while (num >= value) {
+            result += symbol;
+            num -= value;
+        }
+    }
+
+    return result;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line

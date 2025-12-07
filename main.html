@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numeral Converter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-   </script>
 
+  <h1>Convert Number to Roman Numeral</h1>
+
+  <div class="container">
+    <label for="numberInput">Enter Number:</label>
+    <input type="number" id="numberInput" placeholder="Enter number" min="0" max="100000">
+
+    <button onclick="convertAndShow()">Convert</button>
+
+    <h3>Roman Numeral:</h3>
+    <pre id="output"></pre>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
